@@ -20,4 +20,13 @@ export default class Icons {
       />
     );
   };
+  static Box = ({ status }) => {
+    return (
+      <Icon.Box
+        size="18px"
+        className={status ? "menu-icon white" : "menu-icon"}
+        style={{ marginRight: "10px" }}
+      />
+    );
+  };
 }
