@@ -26,12 +26,12 @@ const Layout = () => {
     },
     {
       title: "Products",
-      component: <Icons.Box status={false} />,
+      component: <Icons.Box />,
       subcat: ["Example 1", "Example 2", "Example 3"],
     },
     {
       title: "Products",
-      component: <Icons.Box status={false} />,
+      component: <Icons.Box />,
       subcat: ["Example 1", "Example 2", "Example 3"],
     },
   ];
