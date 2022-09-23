@@ -29130,7 +29130,7 @@ div.tagsinput span.tag a {
   position: relative;
 }
 
-.sidebar .nav .nav-item.active > .nav-link i,
+.sidebar .nav .nav-item.active > .nav-link *,
 .sidebar .nav .nav-item.active > .nav-link .menu-title,
 .sidebar .nav .nav-item.active > .nav-link .menu-arrow {
   color: #fff;
@@ -29140,7 +29140,7 @@ div.tagsinput span.tag a {
   content: "\e64b";
 }
 
-.sidebar .nav .nav-item:hover > .nav-link i,
+
 .sidebar .nav .nav-item:hover > .nav-link .menu-title,
 .sidebar .nav .nav-item:hover > .nav-link .menu-arrow {
   color: #fff;

@@ -5,36 +5,16 @@ import * as Icon from "react-feather";
 import { Color } from "../helpers/common";
 import Icons from "../components/Icons";
 import Collapse from "react-bootstrap/Collapse";
+import { navTitle } from "../components/Sidebar.js";
 
 const Layout = () => {
-  const [open, setOpen] = useState([]);
+  var [open, setOpen] = useState(0);
   const pathname = useLocation().pathname;
 
   const isActive = (path) =>
     pathname === path ? "nav-item active" : "nav-item";
 
-  const navTitle = [
-    {
-      path: "/",
-      title: "Dashboard",
-      component: <Icons.Grid status={pathname === `/`} />,
-    },
-    {
-      path: "/blank",
-      title: "Employees",
-      component: <Icons.User status={pathname === `/blank`} />,
-    },
-    {
-      title: "Products",
-      component: <Icons.Box />,
-      subcat: ["Example 1", "Example 2", "Example 3"],
-    },
-    {
-      title: "Products",
-      component: <Icons.Box />,
-      subcat: ["Example 1", "Example 2", "Example 3"],
-    },
-  ];
+  const isSelected = (id) => open === id;
 
   return (
     <>
@@ -46,7 +26,11 @@ const Layout = () => {
             {navTitle.map((v, i) => {
               return !v.subcat ? (
                 <li className={isActive(v.path)}>
-                  <Link to={v.path} className="nav-link">
+                  <Link
+                    to={v.path}
+                    className="nav-link"
+                    onClick={() => setOpen(0)}
+                  >
                     {v.component}
                     <span className="menu-title">{v.title}</span>
                   </Link>
@@ -55,20 +39,22 @@ const Layout = () => {
                 <li class="nav-item">
                   <Link
                     className="nav-link"
-                    aria-expanded={open[i] || false}
+                    aria-expanded={isSelected(i)}
                     aria-controls={v.title}
-                    onClick={() => setOpen(!open[i])}
+                    onClick={() => {
+                      setOpen(i);
+                    }}
                   >
                     {v.component}
                     <span class="menu-title">{v.title}</span>
                   </Link>
-                  <Collapse in={open[i] || false}>
+                  <Collapse in={isSelected(i)}>
                     <div id={v.title}>
                       <ul class="nav flex-column sub-menu">
                         {v.subcat.map((sub) => {
                           return (
                             <li class="nav-item">
-                              <Link class="nav-link">{sub}</Link>
+                              <Link class="nav-link">{sub.title}</Link>
                             </li>
                           );
                         })}

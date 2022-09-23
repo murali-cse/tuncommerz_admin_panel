@@ -1,25 +1,27 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import * as Icon from "react-feather";
 import { Color } from "../helpers/common";
+import Icons from "./Icons";
 
 const Navbar = () => {
   return (
     <>
       <nav className="navbar col-lg-12 col-12 p-0  fixed-top d-flex flex-row">
         <div className="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
-          <a className="navbar-brand brand-logo me-5" href="index-2.html">
+          <Link className="navbar-brand brand-logo me-5" to="/">
             <img
               src="https://www.bootstrapdash.com/demo/skydash/template/images/logo.svg"
               className="me-2"
               alt="logo"
             />
-          </a>
-          <a className="navbar-brand brand-logo-mini" href="index-2.html">
+          </Link>
+          <Link className="navbar-brand brand-logo-mini" to="/">
             <img
               src="https://www.bootstrapdash.com/demo/skydash/template/images/logo-mini.svg"
               alt="logo"
             />
-          </a>
+          </Link>
         </div>
         <div className="navbar-menu-wrapper d-flex align-items-center justify-content-end">
           <ul className="navbar-nav mr-lg-2">
@@ -137,12 +139,25 @@ const Navbar = () => {
                 </a>
               </div>
             </li>
-            <li className="nav-item nav-settings d-none d-lg-flex">
-              <a className="nav-link" href="#">
-                <i className="icon-ellipsis"></i>
-              </a>
-            </li>
           </ul>
+          {/* <button
+            className="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
+            type="button"
+            data-bs-toggle="sidebar"
+            data-bs-target="sidebar-offcanvas"
+            aria-controls="sidebar"
+          >
+            <Icons.Menu />
+          </button> */}
+          <button
+            className="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
+            type="button"
+            data-bs-toggle="sidebar"
+            data-bs-target="sidebar-offcanvas"
+            aria-controls="sidebar"
+          >
+            <Icons.Menu />
+          </button>
         </div>
       </nav>
     </>
