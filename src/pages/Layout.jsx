@@ -54,7 +54,9 @@ const Layout = () => {
                         {v.subcat.map((sub) => {
                           return (
                             <li class="nav-item">
-                              <Link class="nav-link">{sub.title}</Link>
+                              <Link class="nav-link" to={sub.path}>
+                                {sub.title}
+                              </Link>
                             </li>
                           );
                         })}

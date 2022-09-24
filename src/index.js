@@ -9,6 +9,7 @@ import Error404 from './pages/Error_404'
 import Error500 from './pages/Error_500'
 import Blankpage from './pages/Blankpage';
 import Employees from './pages/Employees';
+import Category from './pages/Category';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,6 +20,8 @@ root.render(
           <Route index element={<Dashboard />} />
           <Route path="/blank" element={<Blankpage />} />
           <Route path="/employees" element={<Employees />} />
+          <Route path="/category" element={<Category />} />
+          <Route path="/product" element={<Category />} />
         </Route>
         <Route path="*" element={<Error404 />} />
         <Route path="500" element={<Error500 />} />
