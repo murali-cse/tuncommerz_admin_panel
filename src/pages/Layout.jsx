@@ -71,7 +71,7 @@ const Layout = () => {
                 marginTop: "2vh",
               }}
             >
-              <Link class="nav-link">
+              <Link class="nav-link" to="/login">
                 <Icons.logout color={"FF9494"} />
                 <span
                   style={{

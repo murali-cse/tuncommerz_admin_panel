@@ -10932,19 +10932,19 @@ textarea.form-control-lg {
   font-size: 1.25rem;
 }
 
-.form-check {
+/* .form-check {
   display: block;
   min-height: 1.5rem;
   padding-left: 1.5em;
   margin-bottom: 0.125rem;
-}
+} */
 
-.form-check .form-check-input {
+/* .form-check .form-check-input {
   float: left;
   margin-left: -1.5em;
-}
+} */
 
-.form-check-input {
+/* .form-check-input {
   width: 1em;
   height: 1em;
   margin-top: 0.25em;
@@ -10956,7 +10956,7 @@ textarea.form-control-lg {
   border: 1px solid rgba(0, 0, 0, 0.25);
   appearance: none;
   color-adjust: exact;
-}
+} */
 
 .form-check-input[type="checkbox"] {
   border-radius: 0.25em;
@@ -10977,8 +10977,8 @@ textarea.form-control-lg {
 }
 
 .form-check-input:checked {
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: #413E92;
+  border-color: #413E92;
 }
 
 .form-check-input:checked[type="checkbox"] {
@@ -22758,20 +22758,24 @@ code {
 }
 
 /* Checkboxes and Radios */
-.form-check {
+/* .form-check {
   position: relative;
   display: block;
   margin-top: 10px;
   margin-bottom: 10px;
   padding-left: 0;
-}
+} */
 
-.form-check .form-check-label {
+/* .form-check .form-check-label {
   min-height: 18px;
   display: block;
   margin-left: 1.75rem;
   font-size: 0.875rem;
   line-height: 1.5;
+} */
+
+.form-check .form-check-label {
+  margin-left: 0.5rem;
 }
 
 .rtl .form-check .form-check-label {

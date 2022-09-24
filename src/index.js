@@ -15,6 +15,7 @@ import Reports from './pages/Reports';
 import NoDataFound from './components/NoDataFound';
 import Faq from './pages/Faq';
 import Accounts from './pages/Accounts';
+import Login from './pages/Login';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -32,9 +33,11 @@ root.render(
           <Route path="/orders" element={<Orders />} />
           <Route path="/reports" element={<Reports />} />
           <Route path="/faq" element={<Faq />} />
+
         </Route>
         <Route path="*" element={<Error404 />} />
         <Route path="500" element={<Error500 />} />
+        <Route path="login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
