@@ -10,6 +10,12 @@ import Error500 from './pages/Error_500'
 import Blankpage from './pages/Blankpage';
 import Employees from './pages/Employees';
 import Category from './pages/Category';
+import Orders from './pages/Orders';
+import Reports from './pages/Reports';
+import NoDataFound from './components/NoDataFound';
+import Faq from './pages/Faq';
+import Accounts from './pages/Accounts';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,8 +26,12 @@ root.render(
           <Route index element={<Dashboard />} />
           <Route path="/blank" element={<Blankpage />} />
           <Route path="/employees" element={<Employees />} />
+          <Route path="/account" element={<Accounts />} />
           <Route path="/category" element={<Category />} />
           <Route path="/product" element={<Category />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/reports" element={<Reports />} />
+          <Route path="/faq" element={<Faq />} />
         </Route>
         <Route path="*" element={<Error404 />} />
         <Route path="500" element={<Error500 />} />

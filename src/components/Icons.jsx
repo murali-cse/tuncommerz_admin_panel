@@ -14,4 +14,24 @@ export default class Icons {
   static Menu = () => {
     return <Icon.Menu size="18px" style={{ marginRight: "10px" }} />;
   };
+  static trendingUp = () => {
+    return <Icon.TrendingUp size="18px" style={{ marginRight: "10px" }} />;
+  };
+  static sun = () => {
+    return <Icon.Sun size="18px" style={{ marginRight: "10px" }} />;
+  };
+  static return = () => {
+    return <Icon.RotateCcw size="18px" style={{ marginRight: "10px" }} />;
+  };
+  static help = () => {
+    return <Icon.HelpCircle size="18px" style={{ marginRight: "10px" }} />;
+  };
+  static settings = () => {
+    return <Icon.Settings size="18px" style={{ marginRight: "10px" }} />;
+  };
+  static logout = ({ color }) => {
+    return (
+      <Icon.LogOut size="18px" style={{ marginRight: "10px", color: color }} />
+    );
+  };
 }

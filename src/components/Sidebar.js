@@ -11,11 +11,6 @@ export const navTitle = [
         component: <Icons.Grid />,
     },
     {
-        path: "/employees",
-        title: "Employees",
-        component: <Icons.User />,
-    },
-    {
         title: "Products",
         component: <Icons.Box />,
         subcat: [
@@ -29,5 +24,31 @@ export const navTitle = [
             },
         ],
     },
+    {
+        path: "/account",
+        title: "Accounts",
+        component: <Icons.settings />,
+    },
+    {
+        path: "/employees",
+        title: "Employees",
+        component: <Icons.User />,
+    },
+    {
+        path: "/orders",
+        title: "Orders",
+        component: <Icons.trendingUp />,
+    },
+    {
+        path: "/reports",
+        title: "Return Reports",
+        component: <Icons.return />,
+    },
+    {
+        path: "/faq",
+        title: "FAQ",
+        component: <Icons.help />,
+    },
+
 
 ];

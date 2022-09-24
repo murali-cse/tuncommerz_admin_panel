@@ -24,7 +24,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-          <ul className="navbar-nav mr-lg-2">
+          {/* <ul className="navbar-nav mr-lg-2">
             <li className="nav-item nav-search d-none d-lg-block">
               <div className="input-group">
                 <div className="input-group-prepend hover-cursor">
@@ -42,7 +42,7 @@ const Navbar = () => {
                 />
               </div>
             </li>
-          </ul>
+          </ul> */}
           <ul className="navbar-nav navbar-nav-right">
             <li className="nav-item dropdown">
               <a

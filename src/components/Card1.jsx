@@ -27,7 +27,7 @@ const Card1 = ({ title, value, color }) => {
         <div className="card-body">
           <p className="mb-4">{title}</p>
           <p className="fs-30 mb-2">{value}</p>
-          <p>10.00% (30 days)</p>
+          <p>00.00% (30 days)</p>
         </div>
       </div>
     </div>

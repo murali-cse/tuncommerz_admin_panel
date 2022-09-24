@@ -3,6 +3,7 @@ import { Link, Outlet, useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Collapse from "react-bootstrap/Collapse";
 import { navTitle } from "../components/Sidebar.js";
+import Icons from "../components/Icons";
 
 const Layout = () => {
   var [open, setOpen] = useState(0);
@@ -63,6 +64,27 @@ const Layout = () => {
                 </li>
               );
             })}
+            <li
+              style={{
+                border: "1.5px solid #FF9494",
+                fontFamily: "sans-serif",
+                marginTop: "2vh",
+              }}
+            >
+              <Link class="nav-link">
+                <Icons.logout color={"FF9494"} />
+                <span
+                  style={{
+                    color: "#FF9494",
+                    fontWeight: "bold",
+                    letterSpacing: "1.5",
+                    fontSize: "12px",
+                  }}
+                >
+                  LOGOUT
+                </span>
+              </Link>
+            </li>
           </ul>
         </nav>
         <div className="main-panel">
