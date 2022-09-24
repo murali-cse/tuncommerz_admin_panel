@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import * as Icon from "react-feather";
-import { Color } from "../helpers/common";
-import Icons from "../components/Icons";
 import Collapse from "react-bootstrap/Collapse";
 import { navTitle } from "../components/Sidebar.js";
 
