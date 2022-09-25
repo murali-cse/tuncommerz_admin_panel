@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { Alert, Button, Card, Form } from "react-bootstrap";
+import { Alert, Button, Form } from "react-bootstrap";
 import CatCard from "../components/CatCard";
 import CenterModel from "../components/CenterModel";
 import Icons from "../components/Icons";
-import NoDataFound from "../components/NoDataFound";
 
 const Category = () => {
   const [modalShow, setModalShow] = useState(false);
@@ -13,7 +12,9 @@ const Category = () => {
     <>
       <div className="p-5 m-4" style={{ backgroundColor: "white" }}>
         <div className="row">
-          <h4 className="tz-bold">Add Categories</h4>
+          <h4 className="tz-bold d-none d-lg-block d-xl-block">
+            Add Categories
+          </h4>
         </div>
         <div className="d-none d-lg-block d-xl-block">
           <div className="row"></div>
@@ -32,7 +33,7 @@ const Category = () => {
                 }}
               >
                 <div className="row text-center">
-                  <Icons.upload />
+                  <Icons.Upload />
                   <h5 className="mt-3">Upload Image</h5>
                 </div>
               </div>
@@ -61,7 +62,7 @@ const Category = () => {
                   />
 
                   <Button className="mt-3" onClick={() => setModalShow(true)}>
-                    <Icons.add /> Add Category
+                    <Icons.Add /> Add Category
                   </Button>
                 </div>
               </div>

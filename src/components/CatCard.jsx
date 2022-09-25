@@ -1,4 +1,5 @@
 import React from "react";
+import { Badge } from "react-bootstrap";
 
 const CatCard = () => {
   return (
@@ -9,6 +10,9 @@ const CatCard = () => {
           className="tz-cat-img"
         />
         <h4 className="mt-2">Title</h4>
+        <Badge pill bg="success">
+          Active
+        </Badge>
       </div>
     </div>
   );

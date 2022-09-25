@@ -14,9 +14,13 @@
     content:""
 }
 
+.form-check-input[type="checkbox"] {
+    border-radius: 0.25em;
+    height: 18px;
+    width: 18px;
+}
 
-
-/* .data-table-extensions > .data-table-extensions-action > button.download {
-    background-image: url('../assets/images/download.svg');
-    background-size: 19px;
-} */
+.tz-form-input-center {
+    display: flex;
+    align-items: "center";
+}

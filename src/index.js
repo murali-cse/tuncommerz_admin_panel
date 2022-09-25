@@ -17,6 +17,8 @@ import Accounts from './pages/Accounts';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Customers from './pages/Customers';
+import AddProducts from './pages/AddProducts';
+import Product from './pages/Product';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -31,6 +33,8 @@ root.render(
           <Route path="/customers" element={<Customers />} />
           <Route path="/account" element={<Accounts />} />
           <Route path="/category" element={<Category />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/addproduct" element={<AddProducts />} />
           <Route path="/product" element={<Category />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/reports" element={<Reports />} />

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Collapse from "react-bootstrap/Collapse";
-import { navTitle } from "../components/Sidebar.js";
+import { navTitle } from "../components/Sidebar";
 import Icons from "../components/Icons";
 
 const Layout = () => {
@@ -72,7 +72,7 @@ const Layout = () => {
               }}
             >
               <Link className="nav-link" to="/login">
-                <Icons.logout color={"FF9494"} />
+                <Icons.Logout color={"FF9494"} />
                 <span
                   style={{
                     color: "#FF9494",
