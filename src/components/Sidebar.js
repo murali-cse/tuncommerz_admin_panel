@@ -26,13 +26,18 @@ export const navTitle = [
     },
     {
         path: "/account",
-        title: "Accounts",
+        title: "Account",
         component: <Icons.settings />,
     },
     {
         path: "/employees",
         title: "Employees",
         component: <Icons.User />,
+    },
+    {
+        path: "/customers",
+        title: "Customers",
+        component: <Icons.Users />,
     },
     {
         path: "/orders",

@@ -8,6 +8,9 @@ export default class Icons {
   static User = () => {
     return <Icon.User size="18px" style={{ marginRight: "10px" }} />;
   };
+  static Users = () => {
+    return <Icon.Users size="18px" style={{ marginRight: "10px" }} />;
+  };
   static Box = () => {
     return <Icon.Box size="18px" style={{ marginRight: "10px" }} />;
   };
@@ -32,6 +35,19 @@ export default class Icons {
   static logout = ({ color }) => {
     return (
       <Icon.LogOut size="18px" style={{ marginRight: "10px", color: color }} />
+    );
+  };
+  static add = ({ color }) => {
+    return (
+      <Icon.Plus size="18px" style={{ marginRight: "10px", color: color }} />
+    );
+  };
+  static upload = ({ color }) => {
+    return (
+      <Icon.UploadCloud
+        size="18px"
+        style={{ marginRight: "10px", color: color }}
+      />
     );
   };
 }

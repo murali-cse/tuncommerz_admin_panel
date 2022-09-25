@@ -1,3 +1,22 @@
-.nav_active {
-    color: white
+
+.tz-bold {
+    font-weight: bold;
+    padding-left: 10px;
 }
+
+.tz-cat-img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.data-table-extensions > .data-table-extensions-action > button.download:hover::after {
+    content:""
+}
+
+
+
+/* .data-table-extensions > .data-table-extensions-action > button.download {
+    background-image: url('../assets/images/download.svg');
+    background-size: 19px;
+} */

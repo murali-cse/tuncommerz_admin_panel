@@ -51,8 +51,8 @@ const Layout = () => {
                       <ul class="nav flex-column sub-menu">
                         {v.subcat.map((sub) => {
                           return (
-                            <li class="nav-item">
-                              <Link class="nav-link" to={sub.path}>
+                            <li className={isActive(v.path)}>
+                              <Link className="nav-link" to={sub.path}>
                                 {sub.title}
                               </Link>
                             </li>
@@ -71,7 +71,7 @@ const Layout = () => {
                 marginTop: "2vh",
               }}
             >
-              <Link class="nav-link" to="/login">
+              <Link className="nav-link" to="/login">
                 <Icons.logout color={"FF9494"} />
                 <span
                   style={{

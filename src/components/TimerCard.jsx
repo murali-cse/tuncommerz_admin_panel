@@ -7,7 +7,9 @@ const TimerCard = () => {
   const [day, setDay] = useState("");
 
   useEffect(() => {
-    setDay(moment(new Date()).format("dddd"));
+    let date = new Date();
+    setTimer(moment(date).format("hh:mm A"));
+    setDay(moment(date).format("dddd"));
   });
 
   setInterval(() => {

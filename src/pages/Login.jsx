@@ -64,10 +64,10 @@ const Login = () => {
                       </a>
                     </div>
                     <div className="text-center mt-4 font-weight-light">
-                      Don't have an account?{" "}
-                      <a href="register.html" className="text-primary">
+                      Don't have an account?
+                      <Link to="/signup" className="text-primary">
                         Create
-                      </a>
+                      </Link>
                     </div>
                   </Form>
                 </div>
