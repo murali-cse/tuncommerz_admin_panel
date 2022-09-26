@@ -11,6 +11,15 @@ const Customers = () => {
     data,
   };
 
+  const customStyle = {
+    headCells: {
+      style: {
+        fontWeight: "bold",
+        fontSize: "14px",
+      },
+    },
+  };
+
   return (
     <>
       <div
@@ -33,6 +42,7 @@ const Customers = () => {
             noHeader
             defaultSortField="id"
             defaultSortAsc={true}
+            customStyles={customStyle}
             pagination
             highlightOnHover
           />

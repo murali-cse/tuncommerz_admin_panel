@@ -13582,7 +13582,7 @@ fieldset:disabled .wizard > .actions a,
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid #e3e3e3;
-  border-radius: 20px;
+  /* border-radius: 20px; */
 }
 
 .card > hr {
@@ -26986,7 +26986,6 @@ table.dataTable tbody td.select-checkbox:after {
   border-radius: 4px;
   display: block;
   margin: auto;
-  vertical-align: middle;
   position: absolute;
   top: 6px;
   z-index: -1;
@@ -27014,7 +27013,6 @@ table.dataTable tbody td.select-checkbox:after {
   -moz-box-shadow: 3px 3px 6px 0 rgba(147, 127, 201, 0.43);
   display: block;
   margin: auto;
-  vertical-align: middle;
   position: absolute;
   top: 6px;
   z-index: -1;
@@ -27044,7 +27042,6 @@ table.dataTable tbody td.select-checkbox:after {
   border-radius: 4px;
   display: block;
   margin: auto;
-  vertical-align: middle;
   position: absolute;
   top: 6px;
   z-index: -1;
@@ -27067,7 +27064,6 @@ table.dataTable tbody td.select-checkbox:after {
   border-radius: 4px;
   display: block;
   margin: auto;
-  vertical-align: middle;
   position: absolute;
   top: 6px;
   z-index: -1;
@@ -28470,6 +28466,7 @@ div.tagsinput span.tag a {
   background: rgba(0, 0, 0, 0.8);
   width: 100px;
   margin-left: -50px;
+  transition: 0.1s left, 0.1s top;
   -webkit-transition: 0.1s left, 0.1s top;
 }
 

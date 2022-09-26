@@ -19,6 +19,7 @@ import Signup from './pages/Signup';
 import Customers from './pages/Customers';
 import AddProducts from './pages/AddProducts';
 import Product from './pages/Product';
+import ProductDetails from './pages/ProductDetails';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -34,6 +35,7 @@ root.render(
           <Route path="/account" element={<Accounts />} />
           <Route path="/category" element={<Category />} />
           <Route path="/product" element={<Product />} />
+          <Route path="/product/detail/:id" element={<ProductDetails />} />
           <Route path="/addproduct" element={<AddProducts />} />
           <Route path="/product" element={<Category />} />
           <Route path="/orders" element={<Orders />} />

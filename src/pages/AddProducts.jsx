@@ -15,20 +15,22 @@ const AddProducts = () => {
             <h3 className="p-4 tz-bold">Add Product</h3>
             <div className="col-lg-3">
               <div className="row">
-                <div
-                  className="mb-4 mt-4 mx-4"
-                  style={{
-                    backgroundColor: "#DDDDDD",
-                    width: "200px",
-                    aspectRatio: "1",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <div className="row text-center">
-                    <Icons.Upload />
-                    <h5 className="mt-3">Upload Image</h5>
+                <div className="d-flex justify-content-center">
+                  <div
+                    className="mb-4 mt-4 mx-4"
+                    style={{
+                      backgroundColor: "#DDDDDD",
+                      width: "200px",
+                      aspectRatio: "1",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <div className="row text-center">
+                      <Icons.Upload />
+                      <h5 className="mt-3">Upload Image</h5>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -63,6 +65,9 @@ const AddProducts = () => {
                     />
                   </div>
                 </Form>
+              </div>
+              <div className="d-flex justify-content-center mt-4">
+                <Button style={{ width: "95%" }}>SUBMIT</Button>
               </div>
             </div>
             <div className="col-lg-9">
@@ -115,7 +120,6 @@ const AddProducts = () => {
                   <h4 className="tz-bold p-0">Variant</h4>
                   <Button className="btn-inverse-info"> Add Variant </Button>
                 </div>
-
                 <div className="row">
                   <div className="col-lg-6 col-md-6">
                     <Form.Group
@@ -126,8 +130,8 @@ const AddProducts = () => {
                         SKU<span style={{ color: "red" }}>*</span>
                       </Form.Label>
                       <Form.Control
-                        type="number"
-                        placeholder="No of stocks"
+                        type="text"
+                        placeholder="SKU"
                         onChange={(e) => {
                           if (e.target.value < 0) {
                             e.target.value = 0;
@@ -225,14 +229,18 @@ const AddProducts = () => {
                       controlId="exampleForm.ControlInput1"
                     >
                       <Form.Label>
-                        Discount Price<span style={{ color: "red" }}>*</span>
+                        Discount (%)<span style={{ color: "red" }}>*</span>
                       </Form.Label>
                       <Form.Control
                         type="number"
-                        placeholder="Price"
+                        placeholder="10%"
                         onChange={(e) => {
                           if (e.target.value < 0) {
                             e.target.value = 0;
+                          }
+
+                          if (e.target.value > 100) {
+                            e.target.value = 100;
                           }
                         }}
                       />
