@@ -1,11 +1,35 @@
 import React, { useState } from "react";
-import { Alert, Button, Form } from "react-bootstrap";
-
+import { Alert, Button, Form, OverlayTrigger, Popover } from "react-bootstrap";
+import { ChromePicker } from "react-color";
 import Icons from "../components/Icons";
 import SmallImageCard from "../components/SmallImageCard";
+import "../css/style.css";
 
 const AddProducts = () => {
   const [showDiscount, setShowDiscount] = useState(false);
+  const [colorPicker, setColorPicker] = useState("#000000");
+
+  const smallImage = [
+    "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?cs=srgb&dl=pexels-pixabay-45201.jpg&fm=jpg",
+    "https://media.istockphoto.com/photos/funny-british-shorthair-cat-portrait-looking-shocked-or-surprised-picture-id1361394182?b=1&k=20&m=1361394182&s=170667a&w=0&h=cW_NDV-D-jrWBVcEPclIU9vRipFQZQC0armvGMN7w-c=",
+    "https://images.unsplash.com/photo-1611915387288-fd8d2f5f928b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80",
+  ];
+
+  const popover = (
+    <Popover id="popover-basic">
+      <Popover.Header as="h3">Choose Color</Popover.Header>
+      <Popover.Body>
+        <ChromePicker
+          color={colorPicker}
+          disableAlpha={true}
+          onChangeComplete={(color) => {
+            setColorPicker(color.hex);
+            console.log(colorPicker);
+          }}
+        />
+      </Popover.Body>
+    </Popover>
+  );
 
   return (
     <>
@@ -38,9 +62,9 @@ const AddProducts = () => {
                 className="d-flex"
                 style={{ justifyContent: "space-between" }}
               >
-                <SmallImageCard />
-                <SmallImageCard />
-                <SmallImageCard />
+                <SmallImageCard img={smallImage[0]} />
+                <SmallImageCard img={smallImage[1]} />
+                <SmallImageCard img={smallImage[2]} />
               </div>
               <div className="mt-5 mb-3">
                 <h4 className="tz-bold">Visibility</h4>
@@ -56,7 +80,7 @@ const AddProducts = () => {
                       className="mb-2"
                     />
                   </div>
-                  <div className="pt-2">
+                  <div className="pt-2 mb-4">
                     <Form.Check
                       type="radio"
                       name="visibility_group"
@@ -66,7 +90,7 @@ const AddProducts = () => {
                   </div>
                 </Form>
               </div>
-              <div className="d-flex justify-content-center mt-4">
+              <div className="d-flex justify-content-center mt-4 mb-3 d-none d-lg-block d-xl-block d-md-block">
                 <Button style={{ width: "95%" }}>SUBMIT</Button>
               </div>
             </div>
@@ -105,6 +129,34 @@ const AddProducts = () => {
                     placeholder="Product Description"
                   />
                 </Form.Group>
+                <div className="row">
+                  <div className="col-lg-6 col-xl-6">
+                    <Form.Group
+                      className="mb-3"
+                      controlId="exampleForm.ControlInput1"
+                    >
+                      <Form.Label>
+                        Shipping Fee<span style={{ color: "red" }}>*</span>
+                      </Form.Label>
+                      <Form.Control type="number" placeholder="Shipping Fee" />
+                    </Form.Group>
+                  </div>
+                  <div className="col-lg-6 col-xl-6">
+                    <Form.Group className="mb-3">
+                      <Form.Label>
+                        Able to refund the amount?
+                        <span style={{ color: "red" }}>*</span>
+                      </Form.Label>
+                      <Form.Select style={{ padding: "1rem" }}>
+                        <option>Select yes or no</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                      </Form.Select>
+                    </Form.Group>
+                  </div>
+                </div>
+
+                <br />
                 <Alert variant="warning">
                   If you want to add more color or size please add as new
                   variant.
@@ -165,13 +217,41 @@ const AddProducts = () => {
                       controlId="exampleForm.ControlInput1"
                     >
                       <Form.Label>Color (optional)</Form.Label>
-                      <Form.Control
-                        type="text"
-                        placeholder="Color of the product"
-                      />
-                      <Form.Text style={{ color: "red" }}>
-                        Don't add more than one color !
-                      </Form.Text>
+                      <div className="row">
+                        <div
+                          style={{
+                            display: "flex",
+                            justifyContent: "center",
+                            alignSelf: "baseline",
+                          }}
+                        >
+                          <div className="col-lg-2">
+                            <div
+                              style={{
+                                backgroundColor: colorPicker,
+                                height: "100%",
+                                width: "auto",
+                              }}
+                            ></div>
+                          </div>
+                          <div className="col-lg-10">
+                            <OverlayTrigger
+                              trigger="click"
+                              placement="right"
+                              overlay={popover}
+                              rootClose={true}
+                            >
+                              <Form.Control
+                                type="text"
+                                placeholder={colorPicker}
+                                value={colorPicker}
+                                readOnly={true}
+                                style={{ backgroundColor: "white" }}
+                              />
+                            </OverlayTrigger>
+                          </div>
+                        </div>
+                      </div>
                     </Form.Group>
                   </div>
                   <div className="col-lg-6 col-md-6">

@@ -24,3 +24,24 @@
     display: flex;
     align-items: "center";
 }
+
+.tz-small-img {
+
+    cursor: pointer;
+}
+
+.tz-small-img .tz-cancel {
+    display: none;
+    position: absolute;
+    cursor: pointer;   
+}
+
+.tz-small-img:hover .tz-cancel {
+    display: block !important;
+    position: absolute;
+    cursor: pointer;
+}
+
+input[readonly] {
+    background-color: white;
+}

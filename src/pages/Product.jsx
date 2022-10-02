@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
+import ProductDetails from "./ProductDetails";
 
 const Product = () => {
   const img =
@@ -15,17 +17,22 @@ const Product = () => {
           {list.map((v, i) => {
             return (
               <div className="col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-4">
-                <ProductCard
-                  title={"Product Title"}
-                  desc="Some quick example text to build on the card title and make up the
+                <Link
+                  to={`/product/detail/${i}`}
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  <ProductCard
+                    title={"Product Title"}
+                    desc="Some quick example text to build on the card title and make up the
                 bulk of the card's content."
-                  image={img}
-                  price="₹ 50,000"
-                  discountPrice={"₹ 50,000"}
-                  discount="50%"
-                  stock={i > 2 ? "In Stock" : "Out of Stock"}
-                  status={false}
-                />
+                    image={img}
+                    price="₹ 50,000"
+                    discountPrice={"₹ 50,000"}
+                    discount="50%"
+                    stock={i > 2 ? "In Stock" : "Out of Stock"}
+                    status={false}
+                  />
+                </Link>
               </div>
             );
           })}

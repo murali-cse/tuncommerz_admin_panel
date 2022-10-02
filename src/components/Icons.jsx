@@ -50,4 +50,7 @@ export default class Icons {
       />
     );
   };
+  static Xcircle = ({ color }) => {
+    return <Icon.XCircle size="18px" style={{ color: color }} />;
+  };
 }

@@ -4,6 +4,10 @@ const handleClick = (title) => {
     console.log(`You clicked me! ${title}`);
 };
 
+export class Profile {
+    static picture = "https://miro.medium.com/max/785/0*Ggt-XwliwAO6QURi.jpg"
+}
+
 export const columns = [
     {
         name: "Title",

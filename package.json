@@ -11,10 +11,12 @@
     "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
+    "react-color": "^2.19.3",
     "react-data-table-component": "^7.5.3",
     "react-data-table-component-extensions": "^1.6.0",
     "react-dom": "^18.2.0",
     "react-feather": "^2.0.10",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.4.1",
     "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
