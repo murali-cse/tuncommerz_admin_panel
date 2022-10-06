@@ -12,9 +12,9 @@ const Category = () => {
     <>
       <div className="p-5 m-4" style={{ backgroundColor: "white" }}>
         <div className="row">
-          <h4 className="tz-bold d-none d-lg-block d-xl-block">
+          <h3 className="tz-bold d-none d-lg-block d-xl-block">
             Add Categories
-          </h4>
+          </h3>
         </div>
         <div className="d-none d-lg-block d-xl-block">
           <div className="row"></div>
@@ -75,7 +75,7 @@ const Category = () => {
         <div className="row">
           {cats.map((v) => {
             return (
-              <div className="col">
+              <div className="col-3">
                 <CatCard />
               </div>
             );

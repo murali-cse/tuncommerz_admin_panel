@@ -121,13 +121,21 @@ const ProductDetails = () => {
                 128 GB, 256 GB, 512 GB
               </h6>
               <br />
-              <h5 className="tz-bold">Total no of stocks :</h5>
-              <h6 style={{ textAlign: "justify", paddingLeft: "10px" }}>10</h6>
+              <div className="row">
+                <div className="col-xl-6 col-lg-6">
+                  <h5 className="tz-bold">Total no of stocks :</h5>
+                  <h6 style={{ textAlign: "justify", paddingLeft: "10px" }}>
+                    10
+                  </h6>
+                </div>
+                <div className="col-xl-6 col-lg-6">
+                  <h5 className="tz-bold">Status :</h5>
+                  <h6 style={{ textAlign: "justify", paddingLeft: "10px" }}>
+                    Active
+                  </h6>
+                </div>
+              </div>
               <br />
-              <h5 className="tz-bold">Status :</h5>
-              <h6 style={{ textAlign: "justify", paddingLeft: "10px" }}>
-                Active
-              </h6>
             </div>
           </div>
         </div>

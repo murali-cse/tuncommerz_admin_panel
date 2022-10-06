@@ -20,6 +20,8 @@ import Customers from './pages/Customers';
 import AddProducts from './pages/AddProducts';
 import Product from './pages/Product';
 import ProductDetails from './pages/ProductDetails';
+import Banners from './pages/Banners';
+import Themes from './pages/Themes';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -30,6 +32,7 @@ root.render(
         <Route path="/" element={<Layout />}>
           <Route index element={<Dashboard />} />
           <Route path="/blank" element={<Blankpage />} />
+          <Route path="/banners" element={<Banners />} />
           <Route path="/employees" element={<Employees />} />
           <Route path="/customers" element={<Customers />} />
           <Route path="/account" element={<Accounts />} />
@@ -40,6 +43,7 @@ root.render(
           <Route path="/product" element={<Category />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/reports" element={<Reports />} />
+          <Route path="/themes" element={<Themes />} />
           <Route path="/faq" element={<Faq />} />
         </Route>
         <Route path="*" element={<Error404 />} />

@@ -8,6 +8,7 @@ import "../css/style.css";
 const AddProducts = () => {
   const [showDiscount, setShowDiscount] = useState(false);
   const [colorPicker, setColorPicker] = useState("#000000");
+  const [showRefund, setShowRefund] = useState(false);
 
   const smallImage = [
     "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?cs=srgb&dl=pexels-pixabay-45201.jpg&fm=jpg",
@@ -147,7 +148,12 @@ const AddProducts = () => {
                         Able to refund the amount?
                         <span style={{ color: "red" }}>*</span>
                       </Form.Label>
-                      <Form.Select style={{ padding: "1rem" }}>
+                      <Form.Select
+                        style={{ padding: "1rem" }}
+                        onChange={(val) => {
+                          setShowRefund(val.target.value === "yes");
+                        }}
+                      >
                         <option>Select yes or no</option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
@@ -155,6 +161,20 @@ const AddProducts = () => {
                     </Form.Group>
                   </div>
                 </div>
+                {showRefund === true ? (
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlInput1"
+                  >
+                    <Form.Label>
+                      Product refund period (in days)
+                      <span style={{ color: "red" }}>*</span>
+                    </Form.Label>
+                    <Form.Control type="number" placeholder="5" />
+                  </Form.Group>
+                ) : (
+                  false
+                )}
 
                 <br />
                 <Alert variant="warning">

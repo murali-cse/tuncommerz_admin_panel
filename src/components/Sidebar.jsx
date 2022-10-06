@@ -8,6 +8,11 @@ export const navTitle = [
     component: <Icons.Grid />,
   },
   {
+    path: "/banners",
+    title: "Banners",
+    component: <Icons.Banner />,
+  },
+  {
     title: "Products",
     component: <Icons.Box />,
     subcat: [
@@ -49,6 +54,11 @@ export const navTitle = [
     path: "/reports",
     title: "Return Reports",
     component: <Icons.Return />,
+  },
+  {
+    path: "/themes",
+    title: "Themes",
+    component: <Icons.Theme />,
   },
   {
     path: "/faq",

@@ -53,4 +53,14 @@ export default class Icons {
   static Xcircle = ({ color }) => {
     return <Icon.XCircle size="18px" style={{ color: color }} />;
   };
+  static Banner = ({ color }) => {
+    return (
+      <Icon.Image size="18px" style={{ marginRight: "10px", color: color }} />
+    );
+  };
+  static Theme = ({ color }) => {
+    return (
+      <Icon.Layout size="18px" style={{ marginRight: "10px", color: color }} />
+    );
+  };
 }
