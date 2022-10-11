@@ -1,0 +1,14 @@
+{
+  "personal": {
+    "name": "Murali",
+    "email": "murali@gmail.com",
+    "phone": "9876543210"
+  },
+  "store": {
+    "name": "Murali's Store",
+    "address": "2nd Floor, KPP Complex Palayapalayam, Erode - Perundurai Rd, Erode, Tamil Nadu 638011",
+    "phone_one": "9876543210",
+    "phone_two": "9876543210",
+    "email": "murali@gmail.com"
+  }
+}

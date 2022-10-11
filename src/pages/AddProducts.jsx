@@ -284,7 +284,7 @@ const AddProducts = () => {
                         type="text"
                         placeholder="Size of the product"
                       />
-                      <Form.Text style={{ color: "red" }}>
+                      <Form.Text style={{ color: "grey", marginTop: "10px" }}>
                         Don't add more than one Size !
                       </Form.Text>
                     </Form.Group>

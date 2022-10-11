@@ -16,8 +16,10 @@ const Accounts = () => {
               </Button>
             </div>
             <img
-              src={Profile.picture}
-              alt="profile picture"
+              src={
+                "https://ik.imagekit.io/oe4zrcmwdi5/image_d6mVfRGk2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1665477775964"
+              }
+              alt="profile"
               style={{
                 aspectRatio: "1",
                 objectFit: "cover",
@@ -90,6 +92,29 @@ const Accounts = () => {
                 <div className="col-xl-6 col-lg-6">
                   <h5 style={{ color: "grey" }}>Official Mail</h5>
                   <h4>contact@nutcommerz.com</h4>
+                </div>
+              </div>
+              <br />
+              <div className="row">
+                <div className="col-xl-6 col-lg-6">
+                  <h5 style={{ color: "grey" }}>Store Logo</h5>
+                  <img
+                    src="https://i.pinimg.com/736x/e9/e2/78/e9e2787d0cb55d570fe1c76843506759.jpg"
+                    alt="store_logo"
+                    height="100px"
+                    width="100px"
+                    objectFit="cover"
+                  />
+                </div>
+                <div className="col-xl-6 col-lg-6">
+                  <h5 style={{ color: "grey" }}>
+                    Short Description about Store
+                  </h5>
+                  <h4>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Maxime mollitia, molestiae quas vel sint commodi repudiandae
+                    consequuntur
+                  </h4>
                 </div>
               </div>
             </div>
