@@ -22,6 +22,8 @@ import Product from './pages/Product';
 import ProductDetails from './pages/ProductDetails';
 import Banners from './pages/Banners';
 import Themes from './pages/Themes';
+import SendMail from './pages/SendMail';
+import Mail1 from './mail/mail1/Mail1';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -44,12 +46,14 @@ root.render(
           <Route path="/orders" element={<Orders />} />
           <Route path="/reports" element={<Reports />} />
           <Route path="/themes" element={<Themes />} />
+          <Route path="/mail" element={<SendMail />} />
           <Route path="/faq" element={<Faq />} />
         </Route>
         <Route path="*" element={<Error404 />} />
         <Route path="500" element={<Error500 />} />
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />
+        <Route path="mail1" element={<Mail1 />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

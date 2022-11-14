@@ -63,4 +63,9 @@ export default class Icons {
       <Icon.Layout size="18px" style={{ marginRight: "10px", color: color }} />
     );
   };
+  static SendMail = ({ color }) => {
+    return (
+      <Icon.Send size="18px" style={{ marginRight: "10px", color: color }} />
+    );
+  };
 }

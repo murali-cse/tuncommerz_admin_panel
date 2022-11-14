@@ -61,6 +61,11 @@ export const navTitle = [
     component: <Icons.Theme />,
   },
   {
+    path: "/mail",
+    title: "Mails",
+    component: <Icons.SendMail />,
+  },
+  {
     path: "/faq",
     title: "FAQ",
     component: <Icons.Help />,

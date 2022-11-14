@@ -1,12 +1,49 @@
+// import React from "react";
 import React, { useState } from "react";
 import { Alert, Button, Form } from "react-bootstrap";
-import CatCard from "../components/CatCard";
+// import CatCard from "../components/CatCard";
 import CenterModel from "../components/CenterModel";
 import Icons from "../components/Icons";
+import MUIDataTable from "mui-datatables";
 
 const Category = () => {
-  const [modalShow, setModalShow] = useState(false);
-  const cats = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const columns = [
+    {
+      name: "name",
+      label: "Name",
+    },
+    {
+      name: "company",
+      label: "Company",
+    },
+    {
+      name: "city",
+      label: "City",
+    },
+    {
+      name: "state",
+      label: "State",
+    },
+  ];
+
+  const data = [
+    { name: "Joe James", company: "Test Corp", city: "Yonkers", state: "NY" },
+    { name: "John Walsh", company: "Test Corp", city: "Hartford", state: "CT" },
+    { name: "Bob Herm", company: "Test Corp", city: "Tampa", state: "FL" },
+    {
+      name: "James Houston",
+      company: "Test Corp",
+      city: "Dallas",
+      state: "TX",
+    },
+  ];
+
+  const options = {
+    elevation: "0",
+    filter: false,
+    viewColumns: false,
+    selectableRows: false,
+  };
 
   return (
     <>
@@ -55,13 +92,12 @@ const Category = () => {
               </div>
               <div className="row">
                 <div>
-                  <CenterModel
-                    show={modalShow}
-                    onHide={() => setModalShow(false)}
+                  {/* <CenterModel
+                    // show={modalShow}
+                    // onHide={() => setModalShow(false)}
                     title="Add Category"
-                  />
-
-                  <Button className="mt-3" onClick={() => setModalShow(true)}>
+                  /> */}
+                  <Button className="mt-3">
                     <Icons.Add /> Add Category
                   </Button>
                 </div>
@@ -69,17 +105,15 @@ const Category = () => {
             </div>
           </div>
         </div>
+        <div></div>
+
         <div className="row">
-          <h4 className="tz-bold">Categories List</h4>
-        </div>
-        <div className="row">
-          {cats.map((v) => {
-            return (
-              <div className="col-3">
-                <CatCard />
-              </div>
-            );
-          })}
+          <MUIDataTable
+            title={"Category List"}
+            data={data}
+            columns={columns}
+            options={options}
+          />
         </div>
       </div>
     </>
