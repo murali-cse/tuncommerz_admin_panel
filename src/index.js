@@ -24,39 +24,43 @@ import Banners from './pages/Banners';
 import Themes from './pages/Themes';
 import SendMail from './pages/SendMail';
 import Mail1 from './mail/mail1/Mail1';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Dashboard />} />
-          <Route path="/blank" element={<Blankpage />} />
-          <Route path="/banners" element={<Banners />} />
-          <Route path="/employees" element={<Employees />} />
-          <Route path="/customers" element={<Customers />} />
-          <Route path="/account" element={<Accounts />} />
-          <Route path="/category" element={<Category />} />
-          <Route path="/product" element={<Product />} />
-          <Route path="/product/detail/:id" element={<ProductDetails />} />
-          <Route path="/addproduct" element={<AddProducts />} />
-          <Route path="/product" element={<Category />} />
-          <Route path="/orders" element={<Orders />} />
-          <Route path="/reports" element={<Reports />} />
-          <Route path="/themes" element={<Themes />} />
-          <Route path="/mail" element={<SendMail />} />
-          <Route path="/faq" element={<Faq />} />
-        </Route>
-        <Route path="*" element={<Error404 />} />
-        <Route path="500" element={<Error500 />} />
-        <Route path="login" element={<Login />} />
-        <Route path="signup" element={<Signup />} />
-        <Route path="mail1" element={<Mail1 />} />
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
+  <Provider store={store}>
+    <React.StrictMode>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Dashboard />} />
+            <Route path="/blank" element={<Blankpage />} />
+            <Route path="/banners" element={<Banners />} />
+            <Route path="/employees" element={<Employees />} />
+            <Route path="/customers" element={<Customers />} />
+            <Route path="/account" element={<Accounts />} />
+            <Route path="/category" element={<Category />} />
+            <Route path="/product" element={<Product />} />
+            <Route path="/product/detail/:id" element={<ProductDetails />} />
+            <Route path="/addproduct" element={<AddProducts />} />
+            <Route path="/product" element={<Category />} />
+            <Route path="/orders" element={<Orders />} />
+            <Route path="/reports" element={<Reports />} />
+            <Route path="/themes" element={<Themes />} />
+            <Route path="/mail" element={<SendMail />} />
+            <Route path="/faq" element={<Faq />} />
+          </Route>
+          <Route path="*" element={<Error404 />} />
+          <Route path="500" element={<Error500 />} />
+          <Route path="login" element={<Login />} />
+          <Route path="signup" element={<Signup />} />
+          <Route path="mail1" element={<Mail1 />} />
+        </Routes>
+      </BrowserRouter>
+    </React.StrictMode>
+  </Provider>
 );
 
 reportWebVitals();
